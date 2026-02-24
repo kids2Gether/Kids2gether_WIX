@@ -216,7 +216,7 @@
                     </div>
                     
                     <!-- BOTÃO PRINCIPAL DE CONVERSÃO - COM DELAY PARA GTM -->
-                          <a href="ninapelomundo_redirect.html" 
+                        <a href="https://rb.gy/0ks0yt" 
                        id="btn-comprar-agora"
                        class="gtm-conversion-button block w-full bg-brand-yellow text-brand-navy text-lg md:text-xl font-extrabold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-yellow-400 transition shadow-lg transform hover:-translate-y-1 cursor-pointer"
                        data-gtm-category="Conversion"
@@ -345,14 +345,10 @@
             });
         });
 
-        // CONVERSAO PRINCIPAL - Com delay para GTM processar antes do redirect
+        // CONVERSAO PRINCIPAL - envia evento para GTM e permite navegação direta ao checkout
         const btnConversao = document.getElementById('btn-comprar-agora');
         if (btnConversao) {
             btnConversao.addEventListener('click', function(e) {
-                e.preventDefault();
-                const url = this.href;
-                
-                // Push evento de conversão para GTM
                 pushToDataLayer({
                     'event': 'purchase_click',
                     'eventCategory': this.getAttribute('data-gtm-category') || 'Conversion',
@@ -361,11 +357,7 @@
                     'eventValue': this.getAttribute('data-gtm-value') || '50',
                     'currency': 'BRL'
                 });
-                
-                // Delay de 500ms para GTM processar antes do redirect
-                setTimeout(function() {
-                    window.location.href = url;
-                }, 500);
+                // navegação segue normalmente para o href (checkout)
             });
         }
 
