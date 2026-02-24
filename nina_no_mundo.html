@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager (Colado no topo do Head) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M6LMVFWB');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <!-- META VIEWPORT CRUCIAL PARA MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Nina no Mundo - Kids2gether</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-mint: #75C9A6; 
+            --brand-yellow: #F9C850;
+            --brand-navy: #2C3E50;
+        }
+
+        .bg-brand-mint { background-color: var(--brand-mint) !important; transition: background-color 0.5s ease; }
+        .text-brand-mint { color: var(--brand-mint) !important; }
+        .border-brand-mint { border-color: var(--brand-mint) !important; }
+        
+        .bg-brand-yellow { background-color: var(--brand-yellow); }
+        .text-brand-yellow { color: var(--brand-yellow); }
+        .border-brand-yellow { border-color: var(--brand-yellow); }
+        
+        .bg-brand-navy { background-color: var(--brand-navy); }
+        .text-brand-navy { color: var(--brand-navy); }
+
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            color: var(--brand-navy); 
+            overflow-x: hidden; 
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar { display: none; }
+        html { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .wavy-bottom, .wavy-top { position: absolute; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 0; }
+        .wavy-bottom { bottom: -1px; transform: rotate(180deg); } 
+        .wavy-top { top: -1px; }
+        
+        .wavy-bottom svg, .wavy-top svg { 
+            display: block; 
+            width: calc(100% + 1.3px); 
+            height: 30px; 
+        }
+        @media (min-width: 768px) {
+            .wavy-bottom svg, .wavy-top svg { height: 50px; }
+        }
+
+        .wavy-bottom .shape-fill, .wavy-top .shape-fill { fill: #FFFFFF; }
+        
+        .btn-hover:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6LMVFWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header / Nav -->
+    <nav class="bg-brand-mint py-2 md:py-1 shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            
+            <div class="flex items-center">
+                <img id="logo-img" 
+                     src="https://static.wixstatic.com/media/965201_710bb5d93665486e8af75d79bbd091f4~mv2.jpeg" 
+                     crossOrigin="anonymous"
+                     alt="Logo Kids2gether" 
+                     class="h-12 md:h-24 object-contain rounded-lg my-1"> 
+            </div>
+
+            <!-- Botão Header - COM IDs e data-attributes para GTM -->
+            <a href="#comprar" 
+               id="btn-header-comprar"
+               class="gtm-scroll-to-buy bg-brand-yellow text-brand-navy font-bold text-xs md:text-base py-2 px-4 md:px-6 rounded-full shadow-md btn-hover transition duration-200 cursor-pointer"
+               data-gtm-category="CTA"
+               data-gtm-action="Click"
+               data-gtm-label="Header - Comprar Agora">
+                Comprar Agora
+            </a>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <header class="relative bg-brand-mint pb-16 pt-8 md:pb-20 md:pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+            
+            <div class="text-center md:text-left text-brand-navy order-2 md:order-1">
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight">
+                    Uma viagem pelo mundo através dos olhos curiosos de Nina!
+                </h1>
+                <p class="text-base md:text-xl mb-6 md:mb-8 font-semibold opacity-90 leading-relaxed">
+                    A cada página, uma nova aventura. Um livro infantil que desperta a curiosidade por conhecer o mundo.
+                </p>
+                <!-- Botão Hero - COM IDs e data-attributes para GTM -->
+                <a href="#comprar" 
+                   id="btn-hero-exemplar"
+                   class="gtm-scroll-to-buy inline-block bg-brand-yellow text-brand-navy text-lg md:text-xl font-bold py-3 px-8 md:py-4 md:px-8 rounded-full shadow-lg animate-bounce cursor-pointer btn-hover transition w-full md:w-auto"
+                   data-gtm-category="CTA"
+                   data-gtm-action="Click"
+                   data-gtm-label="Hero - Quero o meu exemplar">
+                    Quero o meu exemplar!
+                </a>
+            </div>
+            
+            <div class="relative mx-auto w-full max-w-sm md:max-w-md order-1 md:order-2">
+                <div class="bg-white p-2 rounded-3xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500 overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/aa0fab_eb0a302ddc064ecfbe1db3cb28702604~mv2.jpg" 
+                         alt="Autora Nathália Gomes com o livro Nina no Mundo" 
+                         class="rounded-2xl w-full h-auto object-cover aspect-square">
+                </div>
+                <div class="hidden md:block absolute -top-10 -right-10 text-brand-yellow opacity-50 text-6xl"><i class="fas fa-plane"></i></div>
+                <div class="hidden md:block absolute bottom-0 -left-10 text-white opacity-30 text-8xl"><i class="fas fa-globe-americas"></i></div>
+            </div>
+        </div>
+        <div class="wavy-bottom"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg></div>
+    </header>
+
+    <!-- Seção Benefícios -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-brand-navy mb-3">O que você vai encontrar no livro?</h2>
+                <div class="w-16 md:w-24 h-1 bg-brand-yellow mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
+                <div class="order-2 md:order-1 space-y-4 md:space-y-6">
+                    <div class="flex items-start p-3 md:p-4 hover:bg-gray-50 rounded-xl transition">
+                        <div class="bg-brand-mint text-white p-2 md:p-3 rounded-full mr-3 md:mr-4 text-lg md:text-xl shrink-0"><i class="fas fa-heart"></i></div>
+                        <div><h3 class="font-bold text-lg md:text-xl text-brand-navy">Jornada Encantadora</h3><p class="text-sm md:text-base text-gray-600">Em "Nina no Mundo", você e seu pequeno embarcam em uma viagem mágica de descobertas.</p></div>
+                    </div>
+                    <div class="flex items-start p-3 md:p-4 hover:bg-gray-50 rounded-xl transition">
+                        <div class="bg-brand-mint text-white p-2 md:p-3 rounded-full mr-3 md:mr-4 text-lg md:text-xl shrink-0"><i class="fas fa-palette"></i></div>
+                        <div><h3 class="font-bold text-lg md:text-xl text-brand-navy">Ilustrações Envolventes</h3><p class="text-sm md:text-base text-gray-600">Desenhos coloridos e vibrantes que prendem a atenção e estimulam a imaginação.</p></div>
+                    </div>
+                    <div class="flex items-start p-3 md:p-4 hover:bg-gray-50 rounded-xl transition">
+                        <div class="bg-brand-mint text-white p-2 md:p-3 rounded-full mr-3 md:mr-4 text-lg md:text-xl shrink-0"><i class="fas fa-book-open"></i></div>
+                        <div><h3 class="font-bold text-lg md:text-xl text-brand-navy">Textos Poéticos</h3><p class="text-sm md:text-base text-gray-600">Linguagem simples e leve, perfeita para criar momentos inesquecíveis de leitura em família.</p></div>
+                    </div>
+                    <div class="flex items-start p-3 md:p-4 hover:bg-gray-50 rounded-xl transition">
+                        <div class="bg-brand-mint text-white p-2 md:p-3 rounded-full mr-3 md:mr-4 text-lg md:text-xl shrink-0"><i class="fas fa-globe"></i></div>
+                        <div><h3 class="font-bold text-lg md:text-xl text-brand-navy">Inspiração para Sonhar</h3><p class="text-sm md:text-base text-gray-600">Ensina sobre o mundo lá fora e inspira a curiosidade de aprender e se aventurar.</p></div>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 flex justify-center">
+                     <img src="https://static.wixstatic.com/media/aa0fab_abbd3a47d63745f786a8c4044ee2bbb5~mv2.jpg" 
+                          alt="Detalhes do livro Nina no Mundo" 
+                          class="rounded-3xl shadow-lg border-4 border-brand-yellow w-full max-w-sm md:max-w-md h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="py-12 md:py-16 bg-gray-50 relative">
+        <div class="container mx-auto px-6 md:px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-navy text-center mb-8 md:mb-10">O livro que está encantando pais e crianças!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-b-4 border-brand-mint">
+                    <div class="text-brand-yellow text-2xl md:text-3xl mb-3 md:mb-4 opacity-50"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-gray-600 italic mb-4 md:mb-6 text-base md:text-lg">"Um livro maravilhoso! Meus filhos ficaram encantados com as ilustrações e pedem para ler toda noite."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-brand-mint rounded-full flex items-center justify-center text-white font-bold mr-3 text-sm md:text-base">A</div>
+                        <div class="font-bold text-brand-navy text-sm md:text-base">- Ana Clara, mãe de 2</div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-b-4 border-brand-mint">
+                    <div class="text-brand-yellow text-2xl md:text-3xl mb-3 md:mb-4 opacity-50"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-gray-600 italic mb-4 md:mb-6 text-base md:text-lg">"A forma como a Nina descobre o mundo inspirou nossa próxima viagem em família. Recomendo muito!"</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-brand-mint rounded-full flex items-center justify-center text-white font-bold mr-3 text-sm md:text-base">R</div>
+                        <div class="font-bold text-brand-navy text-sm md:text-base">- Roberto Souza, pai viajante</div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-b-4 border-brand-mint">
+                    <div class="text-brand-yellow text-2xl md:text-3xl mb-3 md:mb-4 opacity-50"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-gray-600 italic mb-4 md:mb-6 text-base md:text-lg">"Poético e educativo na medida certa. A qualidade do material é excelente."</p>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-brand-mint rounded-full flex items-center justify-center text-white font-bold mr-3 text-sm md:text-base">C</div>
+                        <div class="font-bold text-brand-navy text-sm md:text-base">- Carla Dias, pedagoga</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Preço (Destino do Scroll) -->
+    <section id="comprar" class="py-16 md:py-20 bg-brand-mint relative text-center">
+         <div class="wavy-top"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="bg-white max-w-full md:max-w-2xl mx-auto rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-brand-navy p-6 text-white">
+                    <h3 class="text-xl md:text-2xl font-bold">Garanta já o seu exemplar!</h3>
+                    <p class="opacity-80 text-sm md:text-base">Um presente encantador para crianças curiosas.</p>
+                </div>
+                <div class="p-6 md:p-12">
+                    
+                    <div class="text-4xl md:text-6xl font-extrabold text-brand-mint mb-2">
+                        <span class="text-xl md:text-2xl align-top font-bold text-gray-400">R$</span>50,00
+                    </div>
+                    
+                    <!-- BOTÃO PRINCIPAL DE CONVERSÃO - COM DELAY PARA GTM -->
+                          <a href="ninapelomundo_redirect.html" 
+                       id="btn-comprar-agora"
+                       class="gtm-conversion-button block w-full bg-brand-yellow text-brand-navy text-lg md:text-xl font-extrabold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-yellow-400 transition shadow-lg transform hover:-translate-y-1 cursor-pointer"
+                       data-gtm-category="Conversion"
+                       data-gtm-action="Click"
+                       data-gtm-label="Comprar Agora - R$50"
+                       data-gtm-value="50">
+                        COMPRAR AGORA <i class="fas fa-shopping-cart ml-2"></i>
+                    </a>
+                    
+                    <div class="mt-4 md:mt-6 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-gray-400 text-xs md:text-sm">
+                        <span><i class="fas fa-lock"></i> Pagamento Seguro</span>
+                        <span class="hidden md:inline">•</span>
+                        <span><i class="fas fa-truck"></i> Entrega Garantida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wavy-bottom"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg></div>
+    </section>
+
+    <!-- Seção Bio -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative group w-48 h-48 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-brand-yellow rounded-full transform translate-x-3 translate-y-3"></div>
+                        <img src="https://static.wixstatic.com/media/aa0fab_17401c97bc884e999353afa284ad7aa4~mv2.jpg" 
+                             alt="Nathália Gomes e Família" 
+                             class="relative rounded-full border-8 border-white shadow-xl w-full h-full object-cover z-10">
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4 md:mb-6">Quem é Nathália Gomes?</h2>
+                    <div class="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
+                        <p>Mãe de 5 meninos, psicóloga e apaixonada por viagens, Nathália Gomes transformou o hábito de explorar o mundo com os filhos em propósito de vida.</p>
+                        <p>Fundadora do <strong>Kids2gether</strong>, um guia online com dicas e experiências kids friendly, Nath acredita que viajar é uma das formas mais bonitas de aprender.</p>
+                        <p>Em <em>"Nina no Mundo"</em>, ela une sua vivência como mãe, viajante e contadora de histórias para inspirar famílias a se aventurarem pelo mundo, com olhos curiosos e coração aberto.</p>
+                    </div>
+                    <div class="mt-6 md:mt-8 flex gap-6 justify-center md:justify-start">
+                        <a href="https://www.instagram.com/nathaliagomesbr/" 
+                           target="_blank" 
+                           class="text-brand-mint text-3xl hover:text-brand-navy transition hover:scale-110 transform"
+                           data-gtm-category="Social"
+                           data-gtm-action="Click"
+                           data-gtm-label="Instagram Nathália">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.kids2gether.com.br/" 
+                           target="_blank" 
+                           class="text-brand-mint text-3xl hover:text-brand-navy transition hover:scale-110 transform"
+                           data-gtm-category="Social"
+                           data-gtm-action="Click"
+                           data-gtm-label="Website Kids2gether">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Ajustado -->
+    <footer class="bg-brand-mint text-brand-navy py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-xs md:text-sm">
+                © 2025 kids2gether | Desenvolvimento 
+                <a href="https://www.instagram.com/agencia4tuna/" target="_blank" class="font-bold hover:underline hover:text-white transition-colors">4tuna</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT MÁGICO PARA EXTRAIR A COR DO LOGO -->
+    <script>
+        window.addEventListener('load', function() {
+            const img = document.getElementById('logo-img');
+            const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+                const hex = x.toString(16);
+                return hex.length === 1 ? '0' + hex : hex;
+            }).join('');
+
+            try {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = img.width || img.naturalWidth;
+                canvas.height = img.height || img.naturalHeight;
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                const p = context.getImageData(0, 0, 1, 1).data; 
+                const hexColor = rgbToHex(p[0], p[1], p[2]);
+                console.log("Cor detectada do logo:", hexColor);
+
+                if (hexColor && hexColor !== '#000000' && hexColor !== '#ffffff') {
+                    document.documentElement.style.setProperty('--brand-mint', hexColor);
+                }
+            } catch (e) {
+                console.log("Auto-cor:", e);
+            }
+        });
+    </script>
+
+    <!-- SCRIPT PARA GTM: EVENTOS DE SCROLL E CONVERSÃO COM DELAY -->
+    <script>
+        // DataLayer helper function
+        window.dataLayer = window.dataLayer || [];
+        
+        function pushToDataLayer(eventData) {
+            window.dataLayer.push(eventData);
+            console.log('GTM Event Pushed:', eventData);
+        }
+
+        // Scroll suave para botões de "Comprar"
+        document.querySelectorAll('.gtm-scroll-to-buy').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Push evento para GTM
+                pushToDataLayer({
+                    'event': 'scroll_to_purchase',
+                    'eventCategory': this.getAttribute('data-gtm-category') || 'CTA',
+                    'eventAction': this.getAttribute('data-gtm-action') || 'Click',
+                    'eventLabel': this.getAttribute('data-gtm-label') || 'Scroll to Buy'
+                });
+                
+                // Scroll suave
+                document.getElementById('comprar').scrollIntoView({behavior: 'smooth'});
+            });
+        });
+
+        // CONVERSAO PRINCIPAL - Com delay para GTM processar antes do redirect
+        const btnConversao = document.getElementById('btn-comprar-agora');
+        if (btnConversao) {
+            btnConversao.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = this.href;
+                
+                // Push evento de conversão para GTM
+                pushToDataLayer({
+                    'event': 'purchase_click',
+                    'eventCategory': this.getAttribute('data-gtm-category') || 'Conversion',
+                    'eventAction': this.getAttribute('data-gtm-action') || 'Click',
+                    'eventLabel': this.getAttribute('data-gtm-label') || 'Purchase Button',
+                    'eventValue': this.getAttribute('data-gtm-value') || '50',
+                    'currency': 'BRL'
+                });
+                
+                // Delay de 500ms para GTM processar antes do redirect
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 500);
+            });
+        }
+
+        // Rastreamento de cliques em links sociais
+        document.querySelectorAll('a[data-gtm-category="Social"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                pushToDataLayer({
+                    'event': 'social_click',
+                    'eventCategory': this.getAttribute('data-gtm-category'),
+                    'eventAction': this.getAttribute('data-gtm-action'),
+                    'eventLabel': this.getAttribute('data-gtm-label')
+                });
+            });
+        });
+
+        // Evento de pageview (opcional, mas recomendado)
+        pushToDataLayer({
+            'event': 'pageview',
+            'pagePath': window.location.pathname,
+            'pageTitle': document.title
+        });
+    </script>
+</body>
+</html>
