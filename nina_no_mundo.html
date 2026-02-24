@@ -6,7 +6,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M6LMVFWB');</script>
+    })(window,document,'script','dataLayer','GTM-PXF3R37');</script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
@@ -67,7 +67,7 @@
 </head>
 <body class="bg-white">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6LMVFWB"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXF3R37"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -325,6 +325,18 @@
         function pushToDataLayer(eventData) {
             window.dataLayer.push(eventData);
             console.log('GTM Event Pushed:', eventData);
+
+            // If this page is embedded in an iframe (Wix), forward the event to the parent
+            // so a GTM container installed in the parent can capture it.
+            try {
+                if (window.top !== window && window.top.postMessage) {
+                    // NOTE: using '*' here for compatibility. For production, replace with the
+                    // exact Wix origin (e.g. 'https://www.example-wix-site.com') for security.
+                    window.top.postMessage({ source: 'nina_no_mundo', gtmEvent: eventData }, '*');
+                }
+            } catch (err) {
+                console.warn('postMessage to parent failed', err);
+            }
         }
 
         // Scroll suave para botões de "Comprar"
