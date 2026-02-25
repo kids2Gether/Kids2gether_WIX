@@ -217,14 +217,15 @@
                     
                     <!-- BOTÃO PRINCIPAL DE CONVERSÃO - COM DELAY PARA GTM -->
                         <a href="https://rb.gy/0ks0yt" 
-                       id="btn-comprar-agora"
-                       class="gtm-conversion-button block w-full bg-brand-yellow text-brand-navy text-lg md:text-xl font-extrabold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-yellow-400 transition shadow-lg transform hover:-translate-y-1 cursor-pointer"
-                       data-gtm-category="Conversion"
-                       data-gtm-action="Click"
-                       data-gtm-label="Comprar Agora - R$50"
-                       data-gtm-value="50">
-                        COMPRAR AGORA <i class="fas fa-shopping-cart ml-2"></i>
-                    </a>
+                           id="btn-comprar-agora"
+                           target="_top" rel="noopener noreferrer"
+                           class="gtm-conversion-button block w-full bg-brand-yellow text-brand-navy text-lg md:text-xl font-extrabold py-3 md:py-4 px-6 md:px-8 rounded-xl hover:bg-yellow-400 transition shadow-lg transform hover:-translate-y-1 cursor-pointer"
+                           data-gtm-category="Conversion"
+                           data-gtm-action="Click"
+                           data-gtm-label="Comprar Agora - R$50"
+                           data-gtm-value="50">
+                            COMPRAR AGORA <i class="fas fa-shopping-cart ml-2"></i>
+                        </a>
                     
                     <div class="mt-4 md:mt-6 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-gray-400 text-xs md:text-sm">
                         <span><i class="fas fa-lock"></i> Pagamento Seguro</span>
@@ -357,10 +358,13 @@
             });
         });
 
-        // CONVERSAO PRINCIPAL - envia evento para GTM e permite navegação direta ao checkout
+        // CONVERSAO PRINCIPAL - envia evento para GTM e força navegação top-level (útil quando embutido em iframe)
         const btnConversao = document.getElementById('btn-comprar-agora');
         if (btnConversao) {
             btnConversao.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = this.href;
+
                 pushToDataLayer({
                     'event': 'purchase_click',
                     'eventCategory': this.getAttribute('data-gtm-category') || 'Conversion',
@@ -369,7 +373,20 @@
                     'eventValue': this.getAttribute('data-gtm-value') || '50',
                     'currency': 'BRL'
                 });
-                // navegação segue normalmente para o href (checkout)
+
+                // Pequeno delay para garantir envio ao dataLayer, depois navega no contexto top-level.
+                setTimeout(function() {
+                    try {
+                        if (window.top !== window && window.top.location) {
+                            window.top.location.href = url;
+                        } else {
+                            window.location.href = url;
+                        }
+                    } catch (err) {
+                        // fallback: abrir em top
+                        window.open(url, '_top');
+                    }
+                }, 200);
             });
         }
 
