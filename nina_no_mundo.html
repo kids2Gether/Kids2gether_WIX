@@ -63,29 +63,28 @@
         .wavy-bottom .shape-fill, .wavy-top .shape-fill { fill: #FFFFFF; }
         
         .btn-hover:hover { filter: brightness(1.1); transform: translateY(-2px); }
-    </style>
 
-    /* Responsive styles */
-    @media (max-width: 768px) {
-        body {
-            font-size: 14px;
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            nav .h-12 {
+                height: 8rem;
+            }
         }
-        .container {
-            padding: 0 10px;
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            .container {
+                padding: 0 5px;
+            }
         }
-        nav .h-12 {
-            height: 8rem;
-        }
-    }
-    @media (max-width: 480px) {
-        body {
-            font-size: 12px;
-        }
-        .container {
-            padding: 0 5px;
-        }
-    }
-</style>
+    </style>
 </head>
 <body class="bg-white">
     <!-- Google Tag Manager (noscript) -->
