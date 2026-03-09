@@ -13,6 +13,26 @@
         .bg-brand-yellow { background-color: var(--brand-yellow); }
         .bg-brand-navy { background-color: var(--brand-navy); }
         body { font-family: 'Nunito', sans-serif; color: var(--brand-navy); overflow-x: hidden; }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            nav .h-12 {
+                height: 8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            .container {
+                padding: 0 5px;
+            }
+        }
     </style>
 </head>
 <body>
